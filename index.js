@@ -108,7 +108,7 @@ class S3Downloader {
   }
 
   installNPMDependencies() {
-    return this.exec(`cd ${this.outputPath} && npm install`)
+    return this.exec(`cd ${this.outputPath} && yarn install`)
       .then(() => this.ui.writeLine('installed npm dependencies'))
       .catch(() => this.ui.writeError('unable to install npm dependencies'));
   }
